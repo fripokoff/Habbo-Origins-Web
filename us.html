@@ -34,7 +34,7 @@
         <script>
 			function insertObjectWithScreenSize() {
 				const screenWidth = window.innerWidth;
-				const screenHeight = document.documentElement.scrollHeight;
+				const screenHeight = window.innerHeight;
             const objectHTML = `
                 <object classid="clsid:166B1BCA-3F9C-11CF-8075-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=10,8,5,1,0" id="habbo" width="${screenWidth}" height="${screenHeight}">
                     <param name="src" value="downloads/shockwave/21/habbo.dcr">
@@ -63,7 +63,7 @@
         }
 		function updateEmbedSize() {
 			const screenWidth = window.innerWidth;
-			const screenHeight = document.documentElement.scrollHeight;
+			const screenHeight = window.innerHeight;
 			console.log(screenHeight);
 			const embed = document.getElementById('habboEmbed');
 			if (embed) {
