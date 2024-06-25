@@ -6,7 +6,7 @@
         <link href="styles/style.css" type="text/css" rel="stylesheet">
     </head>
     <body id="client">
-        <div>
+        <div id="container">
             <object classid="clsid:166B1BCA-3F9C-11CF-8075-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=10,8,5,1,0" id="habbo" width="1920" height="1080">
                 <param name="src" value="downloads/shockwave/20/habbo.dcr">
 				<param name="swStretchStyle" value="meet">
@@ -54,6 +54,14 @@
                     document.getElementById("habboCountUpdateTarget").innerHTML = onlineMessage;
                 });
             })();
+					function adjustFullScreen()
+					{
+					const container = document.getElementById('container');
+					container.style.width = window.innerWidth + 'px';
+					container.style.height = window.innerHeight + 'px';
+					}
+				window.addEventListener('load', adjustFullScreen);
+				window.addEventListener('resize', adjustFullScreen);
         </script>
     </body>
 </html>
