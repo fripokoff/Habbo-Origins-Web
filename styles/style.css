@@ -12,17 +12,10 @@ body {
 	/* text-align: center; */
 }
 
-html, body {
+html, body, #container {
     height: 100%;
     margin: 0;
-  }
-  #container {
-    width: 100%;
-    height: 100%;
-  }
-  object {
-    width: 100%;
-    height: 100%;
+    padding: 0;
   }
 
 
