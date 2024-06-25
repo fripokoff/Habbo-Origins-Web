@@ -7,7 +7,7 @@
     </head>
     <body id="client">
         <div id="container">
-            <object classid="clsid:166B1BCA-3F9C-11CF-8075-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=10,8,5,1,0" id="habbo" width="1920" height="1080">
+            <object classid="clsid:166B1BCA-3F9C-11CF-8075-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/director/sw.cab#version=10,8,5,1,0" id="habbo" width="100%" height="100%">
                 <param name="src" value="downloads/shockwave/20/habbo.dcr">
 				<param name="swStretchStyle" value="meet">
                 <param name="swStretchStyle" value="none">
@@ -19,7 +19,7 @@
                 <param name="sw6" value="external.variables.txt=http://origins-gamedata.habbo.com/external_variables/1">
                 <param name="sw7" value="external.texts.txt=http://origins-gamedata.habbo.com/external_texts/1">
                 <param name="sw8" value="client.allow.cross.domain=1;client.notify.cross.domain=0">
-                <embed src="downloads/shockwave/20/habbo.dcr" bgcolor="#000000" width="1920" height="1080" swvolume="true"
+                <embed src="downloads/shockwave/20/habbo.dcr" bgcolor="#000000" width="100%" height="100%" swvolume="true"
                     swrestart="false" swpauseplay="false" swfastforward="false" swtitle="Habbo Hotel" swcontextmenu="true"
                     swstretchstyle="meet" swtext="" type="application/x-director" pluginspage="http://www.macromedia.com/shockwave/download/"
                     sw2="connection.info.host=game-ous.habbo.com;connection.info.port=40001"
@@ -54,14 +54,16 @@
                     document.getElementById("habboCountUpdateTarget").innerHTML = onlineMessage;
                 });
             })();
-					function adjustFullScreen()
-					{
-					const container = document.getElementById('container');
-					container.style.width = window.innerWidth + 'px';
-					container.style.height = window.innerHeight + 'px';
-					}
-				window.addEventListener('load', adjustFullScreen);
-				window.addEventListener('resize', adjustFullScreen);
+					function adjustFullScreen() {
+		setTimeout(() => {
+			const container = document.getElementById('container');
+			container.style.width = window.innerWidth + 'px';
+			container.style.height = window.innerHeight + 'px';
+		}, 3000); // Délai de 3 secondes
+		}
+
+		window.addEventListener('load', adjustFullScreen);
+		window.addEventListener('resize', adjustFullScreen);
         </script>
     </body>
 </html>
