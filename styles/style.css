@@ -1067,7 +1067,7 @@ Client
 */
 
 body#client {
-	background-color: red;
+	background-color: black;
 	background-image: none !important;
 	color: white;
 }
