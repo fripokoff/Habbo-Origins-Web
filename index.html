@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <title>Habbo ~ Client</title>
+		
+        <link href="styles/style.css" type="text/css" rel="stylesheet">
+		<link href="styles/values.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css" integrity="sha512-bZBu2H0+FGFz/stDN/L0k8J0G8qVsAL0ht1qg5kTwtAheiXwiRKyCq1frwfbSFSJN3jooR5kauE0YjtPzhZtJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+	<!-- version 1.21.9 -->
+	<div id="fixedRight">
+		<div class="container">
+			<div id="main-console" class="console">
+			  <div class="title">@Fripok</div>
+			  <!-- <div class="time">Last Updated: 4 hours ago</div> -->
+			  <div class="pattern">&nbsp;</div>
+			  <div id="loader" class="loop cubes">
+				<div class="item cubes"></div>
+				<div class="item cubes"></div>
+				<div class="item cubes"></div>
+				<div class="item cubes"></div>
+				<div class="item cubes"></div>
+				<div class="item cubes"></div>
+			</div>
+			  <div id="items" class="inner">
+				
+			  </div>
+			  <div class="friends">
+				<div class="friend selected"><img class="avatar" src="images/originvalues.png" align="middle"/>
+				  <p class="name">Originvalues</p>
+				</div>
+				<div style="margin-right: 10px;" class="friend"><img  style="min-width:70px; object-fit: contain;" class="avatar" src="images/rarevalues.gif" align="middle"/>
+				  <p class="name">Rarevalues</p>
+				</div>
+				<div style="background:#ffd400;" id="refreshBtn" class="friend"><img class="avatar" src="images/refresh.png" align="middle"/>
+					<p class="name">Refresh</p>
+				  </div>
+				<div style="background:#ffd400;" id="fullscreenBtn" class="friend"><img class="avatar" src="images/fullscreen.png" align="middle"/>
+				  <p class="name">Fullscreen</p>
+				</div>
+			  </div>
+			  <div id="flagsContainer">
+				<span onclick="setLoaderbyCouuntryCode('us')" class="flag fi fi-us"></span>
+				<span onclick="setLoaderbyCouuntryCode('br')" class="flag fi fi-br"></span>
+				<span onclick="setLoaderbyCouuntryCode('es')" class="flag fi fi-es"></span>
+			  </div>
+			</div>
+		  </div>
+
+	</div>
+    <body id="client">
+
+        <div id="container">
+        </div>
+		<script src="scripts/config.js"></script>
+		<script src="scripts/screen.js"></script>
+		<script src="scripts/values.js"></script>
+    </body>
+</html>
