@@ -66,7 +66,6 @@ function getOriginValues() {
 
 function appendItems(items) {
 	const container = document.getElementById('items');
-	container.innerHTML = '';
 
 	items.forEach(item => {
 		const div = document.createElement('div');
