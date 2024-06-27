@@ -11,7 +11,13 @@ function extractValuesFromHTML(html) {
 		const colaValue = item.querySelector('.cola-value') ? item.querySelector('.cola-value').innerText : 'N/A';
 		const hcValue = item.querySelector('.hc-value') ? item.querySelector('.hc-value').innerText : 'N/A';
 		const images = item.querySelectorAll('img');
-		const imageUrls = Array.from(images).map(img => img.src.replace('http://localhost:3000', ''));
+		const imageUrls = Array.from(images).map(img => {
+			// Split l'URL de l'image par '/' et trouve l'index de 'imgs'
+			const parts = img.src.split('/');
+			const imgsIndex = parts.indexOf('imgs');
+			// Rejoint les parties de l'URL à partir de 'imgs' jusqu'à la fin
+			return parts.slice(imgsIndex).join('/');
+		  });
 
 		extractedValues.push({
 			name,
