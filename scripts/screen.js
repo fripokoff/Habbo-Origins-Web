@@ -3,7 +3,6 @@ var habboEmbed = "";
 function updateEmbedSize() {
 	const screenWidth = window.innerWidth;
 	const screenHeight = window.innerHeight;
-	console.log(screenHeight);
 	const embed = document.getElementById('habboEmbed');
 	const fixedRight = document.getElementById('fixedRight');
 	const main_console = document.getElementById('main-console');
